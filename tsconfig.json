@@ -3,12 +3,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "$types/*": ["./src/@types/*"],
       "@@/*": [
       "./*"
       ],
       "@base/*": ["./src/common/base/*"],
-      "@config": ["./src/config/*"],
-      "@routes": ["./src/routes/*"]
+      "@config/*": ["./src/config/*"],
+      "@common/*": ["./src/common/*"],
+      "@routes/*": ["./src/routes/*"]
     },
     "lib": ["ESNext"],
     "module": "esnext",

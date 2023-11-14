@@ -3,6 +3,7 @@ import AppRouting from "@base/routing/read_routes"
 import env from '@/common/env';
 import RouteObject from '@/@type/routing';
 import morgan from 'morgan';
+import {logger} from "@base/logger/Logger.ts";
 
 class ExpressApp{
     private _app = express()
@@ -21,7 +22,7 @@ class ExpressApp{
     }
 
     private loadRoutes(){
-        console.log("Loading routes...")
+        logger.info("Loading routes...")
         const allRoutes = AppRouting.getRoutes()
         allRoutes.forEach((route) => {
             const express_route = express.Router();
@@ -31,7 +32,7 @@ class ExpressApp{
             })
             this._app.use(express_route)
         })
-        console.log(`${allRoutes.length} routes loaded!`)
+        logger.info(`${allRoutes.length} routes loaded!`)
     }
 
     private loadMiddlewares(){
@@ -39,7 +40,7 @@ class ExpressApp{
         this._app.use(express.urlencoded({ extended: true }))
         this._app.use(express.static('public'))
         if(env.MORGAN == "dev"){
-            console.log("Morgan is enabled!")
+            logger.info("Morgan is enabled!")
             this._app.use(morgan('dev'))
         }
     }
@@ -47,7 +48,7 @@ class ExpressApp{
     private run(){
         const _PORT = env.PORT
         this._app.listen(_PORT, () => {
-            console.log(`=> App is running on port ${_PORT}!`)
+            logger.info(`=> App is running on port ${_PORT}!`)
         })
     }
 }
