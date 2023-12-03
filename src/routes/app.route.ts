@@ -1,4 +1,4 @@
-import RouteObject from "@/@type/routing"
+import RouteObject from "@/@types/routing"
 
 export default [
     {

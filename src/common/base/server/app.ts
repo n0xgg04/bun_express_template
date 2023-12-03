@@ -1,7 +1,7 @@
 import express from 'express'
 import AppRouting from "@base/routing/read_routes"
 import env from '@/common/env';
-import RouteObject from '@/@type/routing';
+import RouteObject from '@/@types/routing';
 import morgan from 'morgan';
 import {logger} from "@base/logger/Logger.ts";
 

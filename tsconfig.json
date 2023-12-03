@@ -29,7 +29,11 @@
     "allowJs": true,
     "types": [
       "bun-types" // add Bun global
-    ]
+    ],
+    "typeRoots": ["node_modules/@types", "./src/@types"],
+    "files": ["src/@types/graphql.d.ts"],
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
   },
    "rules": {
        "no-unused-vars": "off"

@@ -1,4 +1,4 @@
-import { ErrorDetail } from '@/@type/error.ts'
+import { ErrorDetail } from '@/@types/error.ts'
 import HttpStatusCode from '@/common/base/constants/HttpStatusCode'
 import _isArray from 'lodash/isArray'
 

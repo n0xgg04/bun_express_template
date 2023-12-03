@@ -3,7 +3,7 @@ import HttpStatusCode from '@/common/base/constants/HttpStatusCode'
 import { logger } from '@/common/base/logger/Logger'
 import { isArray } from 'lodash'
 import BaseException from './BaseException'
-import { ErrorDetail } from '@/@type/error'
+import { ErrorDetail } from '@/@types/error'
 
 class BaseExceptionHandler {
   public handleError(error: Error | BaseException, response?: Response): void {

@@ -1,6 +1,6 @@
 import BaseException from '@/common/base/exceptions/handler/BaseException'
 import HttpStatusCode from '@base/constants/HttpStatusCode.ts'
-import { ErrorDetail } from '@/@type/error.ts'
+import { ErrorDetail } from '@/@types/error.ts'
 
 export default class BadRequestException extends BaseException {
   constructor(description: string | ErrorDetail) {
